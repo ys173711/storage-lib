@@ -1,11 +1,11 @@
 {
   "name": "storage-lib",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "",
   "keywords": [],
-  "main": "dist/storage-lib.umd.js",
-  "module": "dist/storage-lib.es5.js",
-  "typings": "dist/types/storage-lib.d.ts",
+  "main": "dist/better-storage-lib.umd.js",
+  "module": "dist/better-storage-lib.es5.js",
+  "typings": "dist/types/index.d.ts",
   "files": [
     "dist"
   ],

@@ -1,26 +1,25 @@
 # storage-lib
-Windows storage API lib which support sessionStorage and localStorage
+
+Encapsulate localStorage and sessionStorage into the same API and extension API for better utilization.
 
 ## Install
 
 ```
- npm install good-storage
+ npm install @ys/storage -S
 ```
 
 ## Usage
 
-```
- import storage from 'good-storage'
+```ts
+ import { _localStorage, _sessionStorage } from '@ys/storage'
+ import storage from '@ys/storage'
  
  // localStorage
- storage.set(key,val) 
- 
- storage.get(key, def)
+ storage._localStorage.set('key1', {a: 1, b: 2});
+ _localStorage.get('key1')
  
  // sessionStorage
- storage.session.set(key, val)
- 
- storage.session.get(key, val)
+ storage._sessionStorage.set('key2', [{a: 1, b: 2}]);
  
 ```
 
@@ -30,23 +29,26 @@ Windows storage API lib which support sessionStorage and localStorage
 
 set storage with key and val
 
-#### get(key, def)
+#### get(key)
 
-get storage with key, return def if not find
-
-#### remove(key)
-
-remove storage with key
+get storage with key
 
 #### has(key)
 
 determine storage has the key
 
+#### remove(key)
+
+remove storage with key
+
 #### clear()
+
 clear all storages
 
 #### getAll()
+
 get all the storages
 
 #### forEach(callback)
+
 forEach the storages and call the callback function with each storage
